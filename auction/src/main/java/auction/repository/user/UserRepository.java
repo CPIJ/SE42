@@ -1,4 +1,4 @@
-package auction.repository;
+package auction.repository.user;
 
 import auction.domain.User;
 import java.util.List;

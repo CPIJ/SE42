@@ -1,16 +1,16 @@
-package auction.service;
+package auction.service.registration;
 
 import java.util.*;
 import auction.domain.User;
-import auction.repository.CollectionUserRepository;
-import auction.repository.UserRepository;
+import auction.repository.user.JPAUserRepository;
+import auction.repository.user.UserRepository;
 
-public class RegistrationService {
+public class DefaultRegistrationService implements RegistrationService {
 
     private UserRepository userRepository;
 
-    public RegistrationService() {
-        userRepository = new CollectionUserRepository();
+    public DefaultRegistrationService() {
+        userRepository = new JPAUserRepository();
     }
 
     /**
@@ -21,6 +21,7 @@ public class RegistrationService {
      * e-mailadres (nieuw aangemaakt of reeds bestaand). Als het e-mailadres
      * onjuist is ( het bevat geen '@'-teken) wordt null teruggegeven.
      */
+    @Override
     public User registerUser(String email) {
         if (!email.contains("@")) {
             return null;
@@ -40,6 +41,7 @@ public class RegistrationService {
      * @return Het Userobject dat geïdentificeerd wordt door het gegeven
      * e-mailadres of null als zo'n User niet bestaat.
      */
+    @Override
     public User getUser(String email) {
         return userRepository.findByEmail(email);
     }
@@ -47,6 +49,7 @@ public class RegistrationService {
     /**
      * @return Een iterator over alle geregistreerde gebruikers
      */
+    @Override
     public List<User> getUsers() {
         return userRepository.findAll();
     }
