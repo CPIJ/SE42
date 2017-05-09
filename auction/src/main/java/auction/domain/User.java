@@ -8,7 +8,8 @@ import javax.persistence.Id;
 @Entity
 public class User {
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     private long id;
 
     @Column(unique = true)
@@ -19,6 +20,7 @@ public class User {
 
     }
 
+    // No-Args constructor, required by JPA.
     public User() {
 
     }

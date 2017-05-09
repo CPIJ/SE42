@@ -86,13 +86,13 @@ public class DefaultRegistrationServiceTest {
     //endregion
 
     @Test
-    public void RegisterUser_ValidEmailAddress_ReturnsUser() {
+    public void RegisterUser_GivenValidEmailAddress_ReturnsUser() {
         User user1 = defaultRegistrationService.registerUser("xxx1@yyy");
         assertTrue(user1.getEmail().equals("xxx1@yyy"));
     }
 
     @Test
-    public void RegisterUser_SameEmailadressUsed_ReturnsSameObject() {
+    public void RegisterUser_GivenIdenticalEmailAddresses_ReturnsSameObject() {
         User user2 = defaultRegistrationService.registerUser("xxx2@yyy2");
         assertTrue(user2.getEmail().equals("xxx2@yyy2"));
 
@@ -101,7 +101,7 @@ public class DefaultRegistrationServiceTest {
     }
 
     @Test
-    public void RegisterUser_InvalidEmailAddress_ReturnsNull() {
+    public void RegisterUser_GivenInvalidEmailAddress_ReturnsNull() {
         assertNull(defaultRegistrationService.registerUser("abc"));
     }
 
@@ -114,7 +114,7 @@ public class DefaultRegistrationServiceTest {
     }
 
     @Test
-    public void GetUser_NonExistingEmail_ReturnsNull() {
+    public void GetUser_GivenNonExistingEmail_ReturnsNull() {
         assertNull(defaultRegistrationService.getUser("aaa4@bb5"));
     }
 
