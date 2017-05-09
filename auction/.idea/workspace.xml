@@ -48,13 +48,16 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DefaultRegistrationServiceTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DefaultRegistrationServiceTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/auction/service/DefaultRegistrationServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="95">
+              <caret line="32" column="4" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
               <folding>
                 <element signature="method#setUp#0;class#DefaultRegistrationServiceTest#0" expanded="false" />
+                <element signature="n#!!doc;n#registerUser#0;n#DefaultRegistrationServiceTest#0" expanded="false" />
+                <element signature="e#4160#4161#0" expanded="true" />
+                <element signature="e#4234#4235#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,7 +111,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CollectionUserRepository.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CollectionUserRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/auction/repository/user/CollectionUserRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="722">
@@ -365,134 +368,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="repository" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="repository" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -610,6 +485,32 @@
       <option name="PACKAGE_NAME" value="auction.service" />
       <option name="MAIN_CLASS_NAME" value="auction.service.DefaultRegistrationServiceTest" />
       <option name="METHOD_NAME" value="getUsers" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="DefaultRegistrationServiceTest.GetUsers_MultipleUsersInDatabase_ReturnsListWithUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="auction.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="auction" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="auction.service" />
+      <option name="MAIN_CLASS_NAME" value="auction.service.DefaultRegistrationServiceTest" />
+      <option name="METHOD_NAME" value="GetUsers_MultipleUsersInDatabase_ReturnsListWithUsers" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1003,18 +904,20 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.DefaultRegistrationServiceTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.DefaultRegistrationServiceTest.registerUser" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.DefaultRegistrationServiceTest.getUser" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.DefaultRegistrationServiceTest.getUsers" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.DefaultRegistrationServiceTest.GetUsers_MultipleUsersInDatabase_ReturnsListWithUsers" />
     </list>
     <recent_temporary>
-      <list size="4">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.DefaultRegistrationServiceTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.DefaultRegistrationServiceTest.getUsers" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.DefaultRegistrationServiceTest.getUser" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.DefaultRegistrationServiceTest.registerUser" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.DefaultRegistrationServiceTest.GetUsers_MultipleUsersInDatabase_ReturnsListWithUsers" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.DefaultRegistrationServiceTest.getUsers" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.DefaultRegistrationServiceTest.getUser" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.DefaultRegistrationServiceTest.registerUser" />
       </list>
     </recent_temporary>
   </component>
@@ -1034,7 +937,7 @@
       <workItem from="1493733275952" duration="337000" />
       <workItem from="1493733700537" duration="192000" />
       <workItem from="1494313571262" duration="184000" />
-      <workItem from="1494314338115" duration="5682000" />
+      <workItem from="1494314338115" duration="7049000" />
     </task>
     <servers />
   </component>
@@ -1045,11 +948,11 @@
     <history-entry file="DefaultRegistrationServiceTest - 2017.05.09 at 10h 51m 20s.xml">
       <configuration name="DefaultRegistrationServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DefaultRegistrationServiceTest_getUsers - 2017.05.09 at 10h 43m 34s.xml">
-      <configuration name="DefaultRegistrationServiceTest.getUsers" configurationId="JUnit" />
+    <history-entry file="DefaultRegistrationServiceTest - 2017.05.09 at 11h 15m 15s.xml">
+      <configuration name="DefaultRegistrationServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DefaultRegistrationServiceTest_getUsers - 2017.05.09 at 10h 44m 14s.xml">
-      <configuration name="DefaultRegistrationServiceTest.getUsers" configurationId="JUnit" />
+    <history-entry file="DefaultRegistrationServiceTest_GetUsers_MultipleUsersInDatabase_ReturnsListWithUsers - 2017.05.09 at 11h 12m 47s.xml">
+      <configuration name="DefaultRegistrationServiceTest.GetUsers_MultipleUsersInDatabase_ReturnsListWithUsers" configurationId="JUnit" />
     </history-entry>
     <history-entry file="DefaultRegistrationServiceTest_getUsers - 2017.05.09 at 10h 45m 11s.xml">
       <configuration name="DefaultRegistrationServiceTest.getUsers" configurationId="JUnit" />
@@ -1071,7 +974,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6395000" />
+    <option name="totallyTimeSpent" value="7762000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -1118,7 +1021,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1666,16 +1569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/auction/service/DefaultRegistrationServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="method#setUp#0;class#DefaultRegistrationServiceTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/auction/service/seller/SellerService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -1719,6 +1612,19 @@
             <element signature="e#1085#1086#0" expanded="true" />
             <element signature="e#1136#1137#0" expanded="true" />
             <element signature="e#1181#1182#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/auction/service/DefaultRegistrationServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="32" column="4" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+          <folding>
+            <element signature="method#setUp#0;class#DefaultRegistrationServiceTest#0" expanded="false" />
+            <element signature="n#!!doc;n#registerUser#0;n#DefaultRegistrationServiceTest#0" expanded="false" />
+            <element signature="e#4160#4161#0" expanded="true" />
+            <element signature="e#4234#4235#0" expanded="true" />
           </folding>
         </state>
       </provider>
