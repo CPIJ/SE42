@@ -5,29 +5,41 @@ import static org.junit.Assert.*;
 
 
 import auction.service.registration.DefaultRegistrationService;
+import auction.util.DatabaseCleaner;
 import org.junit.Before;
 import org.junit.Test;
 
 import auction.domain.User;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
 public class DefaultRegistrationServiceTest {
 
     private DefaultRegistrationService defaultRegistrationService;
+    private final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("auctionPU");
+    private final EntityManager entityManager = entityManagerFactory.createEntityManager();
 
     @Before
     public void setUp() throws Exception {
         defaultRegistrationService = new DefaultRegistrationService();
+        DatabaseCleaner cleaner = new DatabaseCleaner(entityManager);
+        cleaner.clean();
     }
 
     @Test
     public void registerUser() {
         User user1 = defaultRegistrationService.registerUser("xxx1@yyy");
         assertTrue(user1.getEmail().equals("xxx1@yyy"));
+
         User user2 = defaultRegistrationService.registerUser("xxx2@yyy2");
         assertTrue(user2.getEmail().equals("xxx2@yyy2"));
+
         User user2bis = defaultRegistrationService.registerUser("xxx2@yyy2");
         assertSame(user2bis, user2);
-        //geen @ in het adres
+
+//        geen @ in het adres
         assertNull(defaultRegistrationService.registerUser("abc"));
     }
 
@@ -35,8 +47,11 @@ public class DefaultRegistrationServiceTest {
     public void getUser() {
         User user1 = defaultRegistrationService.registerUser("xxx5@yyy5");
         User userGet = defaultRegistrationService.getUser("xxx5@yyy5");
+
         assertSame(userGet, user1);
+
         assertNull(defaultRegistrationService.getUser("aaa4@bb5"));
+
         defaultRegistrationService.registerUser("abc");
         assertNull(defaultRegistrationService.getUser("abc"));
     }
@@ -50,7 +65,6 @@ public class DefaultRegistrationServiceTest {
         users = defaultRegistrationService.getUsers();
         assertEquals(1, users.size());
         assertSame(users.get(0), user1);
-
 
         User user2 = defaultRegistrationService.registerUser("xxx9@yyy");
         users = defaultRegistrationService.getUsers();

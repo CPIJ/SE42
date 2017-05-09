@@ -1,9 +1,10 @@
 package auction.service.registration;
 
-import java.util.*;
 import auction.domain.User;
 import auction.repository.user.JPAUserRepository;
 import auction.repository.user.UserRepository;
+
+import java.util.List;
 
 public class DefaultRegistrationService implements RegistrationService {
 
@@ -26,10 +27,12 @@ public class DefaultRegistrationService implements RegistrationService {
         if (!email.contains("@")) {
             return null;
         }
+
         User user = userRepository.findByEmail(email);
         if (user != null) {
             return user;
         }
+
         user = new User(email);
         userRepository.create(user);
         return user;

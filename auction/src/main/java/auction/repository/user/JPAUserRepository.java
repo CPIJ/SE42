@@ -2,9 +2,15 @@ package auction.repository.user;
 
 import auction.domain.User;
 
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class JPAUserRepository implements UserRepository {
+
+    private final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("auctionPU");
+    private final EntityManager entityManager = entityManagerFactory.createEntityManager();
+
     @Override
     public int count() {
         return 0;
@@ -12,7 +18,11 @@ public class JPAUserRepository implements UserRepository {
 
     @Override
     public void create(User user) {
+        entityManager.getTransaction().begin();
 
+        entityManager.persist(user);
+
+        entityManager.getTransaction().commit();
     }
 
     @Override
@@ -22,12 +32,32 @@ public class JPAUserRepository implements UserRepository {
 
     @Override
     public List<User> findAll() {
-        return null;
+        entityManager.getTransaction().begin();
+
+        List<User> users;
+
+        Query query = entityManager.createQuery("SELECT u FROM User u");
+
+        users = query.getResultList();
+
+        entityManager.getTransaction().commit();
+
+        return users;
     }
 
     @Override
     public User findByEmail(String email) {
-        return null;
+        entityManager.getTransaction().begin();
+
+        Query query = entityManager.createQuery("SELECT u FROM User u WHERE u.email = :email").setParameter("email", email);
+
+        try {
+            return (User) query.getSingleResult();
+        } catch (Exception e) {
+            return null;
+        } finally {
+            entityManager.getTransaction().commit();
+        }
     }
 
     @Override
