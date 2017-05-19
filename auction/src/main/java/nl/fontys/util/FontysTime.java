@@ -1,9 +1,16 @@
 package nl.fontys.util;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.sql.Time;
 import java.util.TimeZone;
 
+@Entity
 public class FontysTime {
+	@Id
+	@GeneratedValue
+	private Long id;
 	private long seconds;
 
 	public FontysTime() {
@@ -52,5 +59,13 @@ public class FontysTime {
 
 		TimeZone.setDefault(current);
 		return timeString;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 }

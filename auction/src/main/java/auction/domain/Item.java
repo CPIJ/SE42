@@ -2,13 +2,30 @@ package auction.domain;
 
 import nl.fontys.util.Money;
 
+import javax.persistence.*;
+import java.lang.annotation.Target;
+
+@Entity
 public class Item implements Comparable {
 
+    @Id
+    @GeneratedValue
     private Long id;
+
+    @OneToOne(targetEntity = User.class)
     private User seller;
+
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private Category category;
+
     private String description;
+
+    @OneToOne(targetEntity = Bid.class)
     private Bid highest;
+
+    public Item() {
+
+    }
 
     public Item(User seller, Category category, String description) {
         this.seller = seller;
@@ -16,6 +33,22 @@ public class Item implements Comparable {
         this.description = description;
     }
 
+    public int compareTo(Object arg0) {
+        //TODO
+        return -1;
+    }
+
+    public boolean equals(Object o) {
+        //TODO
+        return false;
+    }
+
+    public int hashCode() {
+        //TODO
+        return 0;
+    }
+
+    //region Getters & Setters
     public Long getId() {
         return id;
     }
@@ -44,18 +77,29 @@ public class Item implements Comparable {
         return highest;
     }
 
-    public int compareTo(Object arg0) {
-        //TODO
-        return -1;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public boolean equals(Object o) {
-        //TODO
-        return false;
+    public void setSeller(User seller) {
+        this.seller = seller;
     }
 
-    public int hashCode() {
-        //TODO
-        return 0;
+    public void setCategory(Category category) {
+        this.category = category;
     }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Bid getHighest() {
+        return highest;
+    }
+
+    public void setHighest(Bid highest) {
+        this.highest = highest;
+    }
+
+    //endregion
 }

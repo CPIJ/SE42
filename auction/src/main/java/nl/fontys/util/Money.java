@@ -1,15 +1,23 @@
 package nl.fontys.util;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.io.*;
 import java.text.*;
 
+@Entity
 public class Money implements Serializable, Comparable {
+
+	@Id
+	@GeneratedValue
+	private long id;
 
 	private static final long serialVersionUID = 1L;
 
 	public static final String EURO = "\u20AC";
 
-	private Money() {
+	public Money() {
 		currency="undefined";
 	}
 	

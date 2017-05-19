@@ -2,10 +2,12 @@ package auction.service;
 
 import static org.junit.Assert.*;
 
+import auction.repository.item.JPAItemRepository;
 import auction.service.auction.DefaultAuctionService;
 import auction.service.registration.DefaultRegistrationService;
 import auction.service.registration.RegistrationService;
 import auction.service.seller.DefaultSellerService;
+import auction.util.DatabaseCleaner;
 import nl.fontys.util.Money;
 
 import org.junit.Before;
@@ -15,6 +17,10 @@ import auction.domain.Bid;
 import auction.domain.Category;
 import auction.domain.Item;
 import auction.domain.User;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.util.ArrayList;
 
 public class DefaultAuctionServiceTest {
@@ -22,17 +28,20 @@ public class DefaultAuctionServiceTest {
     private DefaultAuctionService defaultAuctionService;
     private RegistrationService defaultRegistrationService;
     private DefaultSellerService defaultSellerService;
+    private final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("auctionPU");
+    private final EntityManager entityManager = entityManagerFactory.createEntityManager();
 
     @Before
     public void setUp() throws Exception {
         defaultRegistrationService = new DefaultRegistrationService();
         defaultAuctionService = new DefaultAuctionService();
         defaultSellerService = new DefaultSellerService();
+        DatabaseCleaner databaseCleaner = new DatabaseCleaner(entityManager);
+        databaseCleaner.clean();
     }
 
     @Test
     public void getItem() {
-
         String email = "xx2@nl";
         String omsch = "omsch";
 

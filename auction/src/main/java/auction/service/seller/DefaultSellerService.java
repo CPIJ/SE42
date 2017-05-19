@@ -3,8 +3,12 @@ package auction.service.seller;
 import auction.domain.Category;
 import auction.domain.Item;
 import auction.domain.User;
+import auction.repository.item.ItemRepository;
+import auction.repository.item.JPAItemRepository;
 
 public class DefaultSellerService implements SellerService {
+
+    private ItemRepository itemRepository = new JPAItemRepository();
 
     /**
      * @param seller
@@ -15,8 +19,9 @@ public class DefaultSellerService implements SellerService {
      */
     @Override
     public Item offerItem(User seller, Category cat, String description) {
-        // TODO 
-        return null;
+        Item item = new Item(seller, cat, description);
+        itemRepository.create(item);
+        return item;
     }
     
      /**
@@ -26,7 +31,11 @@ public class DefaultSellerService implements SellerService {
      */
     @Override
     public boolean revokeItem(Item item) {
-        // TODO 
-        return false;
+        if (item.getHighestBid() == null) {
+            itemRepository.remove(item);
+            return true;
+        } else {
+            return false;
+        }
     }
 }

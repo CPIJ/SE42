@@ -1,22 +1,26 @@
 package auction.service;
 
-import static org.junit.Assert.*;
-
-import auction.service.auction.DefaultAuctionService;
-import auction.service.registration.DefaultRegistrationService;
-import auction.service.seller.DefaultSellerService;
-import nl.fontys.util.Money;
-
-import org.junit.Before;
-import org.junit.Test;
-
-
-
 import auction.domain.Category;
 import auction.domain.Item;
 import auction.domain.User;
+import auction.service.auction.DefaultAuctionService;
+import auction.service.registration.DefaultRegistrationService;
+import auction.service.seller.DefaultSellerService;
+import auction.util.DatabaseCleaner;
+import nl.fontys.util.Money;
+import org.junit.Before;
+import org.junit.Test;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import static org.junit.Assert.*;
 
 public class DefaultSellerServiceTest {
+
+    private final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("auctionPU");
+    private final EntityManager entityManager = entityManagerFactory.createEntityManager();
 
     private DefaultAuctionService defaultAuctionService;
     private DefaultRegistrationService defaultRegistrationService;
@@ -27,6 +31,8 @@ public class DefaultSellerServiceTest {
         defaultRegistrationService = new DefaultRegistrationService();
         defaultAuctionService = new DefaultAuctionService();
         defaultSellerService = new DefaultSellerService();
+        DatabaseCleaner databaseCleaner = new DatabaseCleaner(entityManager);
+        databaseCleaner.clean();
     }
 
     /**
@@ -70,10 +76,6 @@ public class DefaultSellerServiceTest {
         assertFalse(res2);
         int count2 = defaultAuctionService.findItemByDescription(omsch2).size();
         assertEquals(1, count2);
-        
-        
-        
-        
     }
 
 }

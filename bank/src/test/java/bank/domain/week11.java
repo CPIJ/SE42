@@ -93,10 +93,7 @@ public class week11 {
         //    een id van -100. Pas als er gecommit wordt wordt het ID vastgesteld.
 
         entityManager.flush();
-        // INSERT Statement wordt uitgevoerd.
-
-        // Flush wordt gebruikt om de veranderde data binnen een transactie GELIJK op te slaan
-        // deze methode wacht dus niet op het commit() commando.
+        // Flush zorgt ervoor dat de ID opgehaald wordt.
 
         // assertEquals(expected, account.getId());
         // -> Deze test faalt ook, het accountId is namelijk niet -100.
@@ -188,9 +185,7 @@ public class week11 {
         Account accFound = entityManager.find(Account.class, acc.getId());
 
         assertEquals(balance, accFound.getBalance());
-        // voeg asserties toe om je verwachte waarde van de attributen te verifieren.
-        // doe dit zowel voor de bovenstaande java objecten als voor opnieuw bij de
-        // entitymanager opgevraagde objecten met overeenkomstig Id.
+        // Het account wordt opgehaald uit de database, de balance is dan ook hetzelfde.
     }
 
     @Test
@@ -214,7 +209,8 @@ public class week11 {
         Account found = accountRepository.findByAccountNr(2L);
 
         // Account heeft acc9 overschreven door de merge. Het account nummer wordt dan ook 2.
-        // De balans is niet hetzelfde omdat acc9 als laatste het bedrag overschrijft. dit wordt dan ook opgeslagen.
+        // De balans is niet hetzelfde omdat acc9 als laatste het bedrag overschrijft. Na een merge wordt het object niet
+        // getracked.
         assertEquals(acc9.getId(), found.getId());
         assertNotEquals(acc9.getBalance(), account.getBalance());
     }

@@ -26,7 +26,6 @@ public class User {
     }
 
     //region Getters & Setters
-
     public long getId() {
         return id;
     }
