@@ -1,9 +1,8 @@
 package auction.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Iterator;
+import java.util.Set;
 
 @Entity
 public class User {
@@ -15,14 +14,31 @@ public class User {
     @Column(unique = true)
     private String email;
 
+    @OneToMany(cascade = CascadeType.PERSIST)
+    private Set<Item> offeredItems;
+
     public User(String email) {
         this.email = email;
-
     }
+
+    public static final User DEFAULT = new User("default@default.nl");
 
     // No-Args constructor, required by JPA.
     public User() {
 
+    }
+
+    public User(String email, Set<Item> offeredItems) {
+        this.email = email;
+        this.offeredItems = offeredItems;
+    }
+
+    // Waarom moet deze volgens de tekst private zijn?
+    public void addItem(Item item) {
+        if (item == null) return;
+
+        item.setSeller(this);
+        this.offeredItems.add(item);
     }
 
     //region Getters & Setters
@@ -40,6 +56,18 @@ public class User {
 
     public String getEmail() {
         return email;
+    }
+
+    public Iterator<Item> getOfferedItems() {
+        return offeredItems.iterator();
+    }
+
+    public void setOfferedItems(Set<Item> offeredItems) {
+        this.offeredItems = offeredItems;
+    }
+
+    public int numberOfOfferdItems() {
+        return offeredItems.size();
     }
     //endregion
 

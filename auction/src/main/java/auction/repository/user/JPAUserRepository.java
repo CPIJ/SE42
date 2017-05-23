@@ -34,31 +34,24 @@ public class JPAUserRepository implements UserRepository {
 
     @Override
     public List<User> findAll() {
-        entityManager.getTransaction().begin();
-
         List<User> users;
 
         Query query = entityManager.createQuery("SELECT u FROM User u");
 
         users = query.getResultList();
 
-        entityManager.getTransaction().commit();
-
         return users;
     }
 
     @Override
     public User findByEmail(String email) {
-        entityManager.getTransaction().begin();
-
         Query query = entityManager.createQuery("SELECT u FROM User u WHERE u.email = :email").setParameter("email", email);
 
         try {
             return (User) query.getSingleResult();
         } catch (Exception e) {
+            System.out.println("Geen resultaten");
             return null;
-        } finally {
-            entityManager.getTransaction().commit();
         }
     }
 

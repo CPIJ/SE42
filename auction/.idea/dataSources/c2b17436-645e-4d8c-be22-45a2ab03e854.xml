@@ -18,181 +18,190 @@
     <schema id="12" parent="1" name="sys"/>
     <schema id="13" parent="1" name="test"/>
     <schema id="14" parent="1" name="testdb"/>
-    <table id="15" parent="2" name="bid"/>
-    <table id="16" parent="2" name="category"/>
-    <table id="17" parent="2" name="fontystime"/>
-    <table id="18" parent="2" name="item"/>
-    <table id="19" parent="2" name="money"/>
-    <table id="20" parent="2" name="sequence"/>
-    <table id="21" parent="2" name="user"/>
-    <column id="22" parent="15" name="ID">
+    <schema id="15" parent="1" name="abstract"/>
+    <table id="16" parent="2" name="bid"/>
+    <table id="17" parent="2" name="category"/>
+    <table id="18" parent="2" name="fontystime"/>
+    <table id="19" parent="2" name="item"/>
+    <table id="20" parent="2" name="money"/>
+    <table id="21" parent="2" name="sequence"/>
+    <table id="22" parent="2" name="user"/>
+    <column id="23" parent="16" name="ID">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="23" parent="15" name="AMOUNT_ID">
+    <column id="24" parent="16" name="AMOUNT_ID">
       <Position>2</Position>
       <DataType>bigint(20)|0</DataType>
     </column>
-    <column id="24" parent="15" name="BUYER_ID">
+    <column id="25" parent="16" name="BUYER_ID">
       <Position>3</Position>
       <DataType>bigint(20)|0</DataType>
     </column>
-    <column id="25" parent="15" name="TIME_ID">
+    <column id="26" parent="16" name="TIME_ID">
       <Position>4</Position>
       <DataType>bigint(20)|0</DataType>
     </column>
-    <index id="26" parent="15" name="FK_BID_AMOUNT_ID">
+    <index id="27" parent="16" name="FK_BID_AMOUNT_ID">
       <ColNames>AMOUNT_ID</ColNames>
     </index>
-    <index id="27" parent="15" name="FK_BID_BUYER_ID">
+    <index id="28" parent="16" name="FK_BID_BUYER_ID">
       <ColNames>BUYER_ID</ColNames>
     </index>
-    <index id="28" parent="15" name="FK_BID_TIME_ID">
+    <index id="29" parent="16" name="FK_BID_TIME_ID">
       <ColNames>TIME_ID</ColNames>
     </index>
-    <key id="29" parent="15" name="PRIMARY">
+    <key id="30" parent="16" name="PRIMARY">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="30" parent="15" name="FK_BID_AMOUNT_ID">
+    <foreign-key id="31" parent="16" name="FK_BID_AMOUNT_ID">
       <ColNames>AMOUNT_ID</ColNames>
       <RefSchemaName>auction</RefSchemaName>
       <RefTableName>money</RefTableName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <foreign-key id="31" parent="15" name="FK_BID_BUYER_ID">
+    <foreign-key id="32" parent="16" name="FK_BID_BUYER_ID">
       <ColNames>BUYER_ID</ColNames>
       <RefSchemaName>auction</RefSchemaName>
       <RefTableName>user</RefTableName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <foreign-key id="32" parent="15" name="FK_BID_TIME_ID">
+    <foreign-key id="33" parent="16" name="FK_BID_TIME_ID">
       <ColNames>TIME_ID</ColNames>
       <RefSchemaName>auction</RefSchemaName>
       <RefTableName>fontystime</RefTableName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <column id="33" parent="16" name="ID">
+    <column id="34" parent="17" name="ID">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="34" parent="16" name="DESCRIPTION">
+    <column id="35" parent="17" name="DESCRIPTION">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="35" parent="16" name="PRIMARY">
+    <key id="36" parent="17" name="PRIMARY">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="36" parent="17" name="ID">
+    <column id="37" parent="18" name="ID">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="37" parent="17" name="SECONDS">
+    <column id="38" parent="18" name="SECONDS">
       <Position>2</Position>
       <DataType>bigint(20)|0</DataType>
     </column>
-    <key id="38" parent="17" name="PRIMARY">
+    <key id="39" parent="18" name="PRIMARY">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="39" parent="18" name="ID">
+    <column id="40" parent="19" name="ID">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="40" parent="18" name="DESCRIPTION">
+    <column id="41" parent="19" name="DESCRIPTION">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="41" parent="18" name="CATEGORY_ID">
+    <column id="42" parent="19" name="CATEGORY_ID">
       <Position>3</Position>
       <DataType>bigint(20)|0</DataType>
     </column>
-    <column id="42" parent="18" name="HIGHEST_ID">
+    <column id="43" parent="19" name="SELLER_ID">
       <Position>4</Position>
       <DataType>bigint(20)|0</DataType>
     </column>
-    <column id="43" parent="18" name="SELLER_ID">
+    <column id="44" parent="19" name="HIGHEST_ID">
       <Position>5</Position>
       <DataType>bigint(20)|0</DataType>
     </column>
-    <index id="44" parent="18" name="FK_ITEM_CATEGORY_ID">
+    <index id="45" parent="19" name="FK_ITEM_CATEGORY_ID">
       <ColNames>CATEGORY_ID</ColNames>
     </index>
-    <index id="45" parent="18" name="FK_ITEM_HIGHEST_ID">
+    <index id="46" parent="19" name="FK_ITEM_HIGHEST_ID">
       <ColNames>HIGHEST_ID</ColNames>
     </index>
-    <index id="46" parent="18" name="FK_ITEM_SELLER_ID">
+    <index id="47" parent="19" name="FK_ITEM_SELLER_ID">
       <ColNames>SELLER_ID</ColNames>
     </index>
-    <key id="47" parent="18" name="PRIMARY">
+    <key id="48" parent="19" name="PRIMARY">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="48" parent="18" name="FK_ITEM_CATEGORY_ID">
+    <foreign-key id="49" parent="19" name="FK_ITEM_CATEGORY_ID">
       <ColNames>CATEGORY_ID</ColNames>
       <RefSchemaName>auction</RefSchemaName>
       <RefTableName>category</RefTableName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <foreign-key id="49" parent="18" name="FK_ITEM_HIGHEST_ID">
-      <ColNames>HIGHEST_ID</ColNames>
-      <RefSchemaName>auction</RefSchemaName>
-      <RefTableName>bid</RefTableName>
-      <RefColNames>ID</RefColNames>
-    </foreign-key>
-    <foreign-key id="50" parent="18" name="FK_ITEM_SELLER_ID">
+    <foreign-key id="50" parent="19" name="FK_ITEM_SELLER_ID">
       <ColNames>SELLER_ID</ColNames>
       <RefSchemaName>auction</RefSchemaName>
       <RefTableName>user</RefTableName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <column id="51" parent="19" name="ID">
+    <foreign-key id="51" parent="19" name="FK_ITEM_HIGHEST_ID">
+      <ColNames>HIGHEST_ID</ColNames>
+      <RefSchemaName>auction</RefSchemaName>
+      <RefTableName>bid</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="52" parent="20" name="ID">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="52" parent="19" name="CENTS">
+    <column id="53" parent="20" name="CENTS">
       <Position>2</Position>
       <DataType>bigint(20)|0</DataType>
     </column>
-    <column id="53" parent="19" name="CURRENCY">
+    <column id="54" parent="20" name="CURRENCY">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="54" parent="19" name="PRIMARY">
+    <key id="55" parent="20" name="PRIMARY">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="55" parent="20" name="SEQ_NAME">
+    <column id="56" parent="21" name="SEQ_NAME">
       <Position>1</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="56" parent="20" name="SEQ_COUNT">
+    <column id="57" parent="21" name="SEQ_COUNT">
       <Position>2</Position>
       <DataType>decimal(38)|0</DataType>
     </column>
-    <key id="57" parent="20" name="PRIMARY">
+    <key id="58" parent="21" name="PRIMARY">
       <ColNames>SEQ_NAME</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="58" parent="21" name="ID">
+    <column id="59" parent="22" name="ID">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="59" parent="21" name="EMAIL">
+    <column id="60" parent="22" name="EMAIL">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="60" parent="21" name="PRIMARY">
+    <index id="61" parent="22" name="EMAIL">
+      <ColNames>EMAIL</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="62" parent="22" name="PRIMARY">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
+    </key>
+    <key id="63" parent="22" name="EMAIL">
+      <ColNames>EMAIL</ColNames>
+      <UnderlyingIndexName>EMAIL</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

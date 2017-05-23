@@ -21,7 +21,13 @@ public class Bid {
     @OneToOne(targetEntity = Money.class)
     private Money amount;
 
+    @OneToOne(mappedBy = "highest", targetEntity = Item.class)
+    private Item item;
+
+    public static final Bid DEFAULT = new Bid(User.DEFAULT, new Money(0, Money.EURO));
+
     public Bid() {
+
     }
 
     public Bid(User buyer, Money amount) {
@@ -63,5 +69,13 @@ public class Bid {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
     }
 }

@@ -1,26 +1,28 @@
 package auction.domain;
 
+import com.sun.istack.internal.NotNull;
 import nl.fontys.util.Money;
 
 import javax.persistence.*;
-import java.lang.annotation.Target;
+import java.util.Objects;
 
 @Entity
-public class Item implements Comparable {
+public class Item implements Comparable<Item> {
 
     @Id
     @GeneratedValue
     private Long id;
 
-    @OneToOne(targetEntity = User.class)
+    @ManyToOne(targetEntity = User.class)
     private User seller;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne(cascade = CascadeType.PERSIST, targetEntity = Category.class)
     private Category category;
 
     private String description;
 
     @OneToOne(targetEntity = Bid.class)
+    @JoinColumn(nullable = false)
     private Bid highest;
 
     public Item() {
@@ -31,21 +33,30 @@ public class Item implements Comparable {
         this.seller = seller;
         this.category = category;
         this.description = description;
+        this.seller.addItem(this);
+
+        if (this.getHighestBid() == null) {
+            this.setHighest(Bid.DEFAULT);
+        }
     }
 
-    public int compareTo(Object arg0) {
-        //TODO
-        return -1;
+    public int compareTo(Item other) {
+        return id.compareTo(other.getId());
     }
 
-    public boolean equals(Object o) {
-        //TODO
-        return false;
+    public boolean equals(Object other) {
+        if (other == null) return false;
+        if (other == this) return true;
+        if (!(other instanceof Item)) return false;
+
+        return Objects.equals(id, ((Item) other).getId());
     }
 
+    // Van hier: https://stackoverflow.com/questions/2265503/why-do-i-need-to-override-the-equals-and-hashcode-methods-in-java
     public int hashCode() {
-        //TODO
-        return 0;
+        final int prime = 31;
+        int result = 1;
+        return prime * result + ((id == null) ? 0 : id.hashCode());
     }
 
     //region Getters & Setters
