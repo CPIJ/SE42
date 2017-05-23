@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="abstract@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="abstract">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="asdaf"/>
+    <schema id="4" parent="1" name="auction"/>
+    <schema id="5" parent="1" name="bank"/>
+    <schema id="6" parent="1" name="boterham_db"/>
+    <schema id="7" parent="1" name="demo"/>
+    <schema id="8" parent="1" name="eindproject"/>
+    <schema id="9" parent="1" name="information_schema"/>
+    <schema id="10" parent="1" name="mysql"/>
+    <schema id="11" parent="1" name="performance_schema"/>
+    <schema id="12" parent="1" name="spring-demo"/>
+    <schema id="13" parent="1" name="sys"/>
+    <schema id="14" parent="1" name="test"/>
+    <schema id="15" parent="1" name="testdb"/>
+    <table id="16" parent="2" name="circle"/>
+    <table id="17" parent="2" name="sequence"/>
+    <table id="18" parent="2" name="shape"/>
+    <column id="19" parent="16" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="16" name="RADIUS">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="21" parent="16" name="X">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="22" parent="16" name="Y">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="23" parent="16" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="24" parent="17" name="SEQ_NAME">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="17" name="SEQ_COUNT">
+      <Position>2</Position>
+      <DataType>decimal(38)|0</DataType>
+    </column>
+    <key id="26" parent="17" name="PRIMARY">
+      <ColNames>SEQ_NAME</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="27" parent="18" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="18" name="X">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="29" parent="18" name="Y">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="30" parent="18" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
