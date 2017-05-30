@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8434e030-4d79-4a66-b42a-ff95a3bd13b3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="8434e030-4d79-4a66-b42a-ff95a3bd13b3" name="Default" comment="RegistrationClient works!">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AuctionClient/AuctionClient.iml" afterPath="$PROJECT_DIR$/AuctionClient/AuctionClient.iml" />
     </list>
     <list id="06a64fdc-f670-44e9-92a5-7cd82ae35fb7" name="Non-Essential" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -289,46 +286,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="RegistrationClient" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RegistrationClient" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RegistrationClient" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -925,7 +882,7 @@
       <workItem from="1495191128758" duration="1430000" />
       <workItem from="1496145860621" duration="274000" />
       <workItem from="1496148530595" duration="2699000" />
-      <workItem from="1496151608631" duration="535000" />
+      <workItem from="1496151608631" duration="581000" />
     </task>
     <task id="LOCAL-00001" summary="Moved to central package">
       <created>1496148782583</created>
@@ -948,7 +905,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496150568453</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="RegistrationClient works!">
+      <created>1496152156970</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1496152156970</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -984,7 +948,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20684000" />
+    <option name="totallyTimeSpent" value="20730000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1060,7 +1024,8 @@
     <MESSAGE value="Moved to central package" />
     <MESSAGE value="Made WebService" />
     <MESSAGE value="Added client" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added client" />
+    <MESSAGE value="RegistrationClient works!" />
+    <option name="LAST_COMMIT_MESSAGE" value="RegistrationClient works!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

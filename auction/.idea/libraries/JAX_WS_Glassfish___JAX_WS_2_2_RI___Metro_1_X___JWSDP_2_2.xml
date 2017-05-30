@@ -1,0 +1,30 @@
+<component name="libraryTable">
+  <library name="JAX-WS-Glassfish / JAX-WS 2.2 RI / Metro 1.X / JWSDP 2.2" type="JAX-WS">
+    <properties version="Glassfish / JAX-WS 2.2 RI / Metro 1.X / JWSDP 2.2" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/gmbal-api-only.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/jaxb-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/ha-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/javax.annotation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/jaxws-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/FastInoset.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/management-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/jsr181-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/mimepull.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/jaxb-impl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/saaj-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/policy.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/stax-ex.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/stax2-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/streambuffer.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/saaj-impl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/woodstox-core-asl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/jaxws-tools.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/jaxb-xjc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AuctionClient/lib/jaxws-rt.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
