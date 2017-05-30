@@ -1,5 +1,3 @@
-package example;
-
 import org.junit.Before;
 import org.junit.Test;
 import webAuction.RegistrationWebService;
@@ -31,5 +29,16 @@ public class Tests {
     public void GetUser_NonExistentEmail_UserIsNull() {
         User user = registrationService.getUser("email@adres.nl");
         assertNull(user);
+    }
+
+    @Test
+    public void GetUser_ValidEmail_ReturnsCorrectUser() {
+        String email = "test@test.nl";
+
+        registrationService.register(email);
+
+        User user = registrationService.getUser(email);
+
+        assertEquals(email, user.getEmail());
     }
 }
