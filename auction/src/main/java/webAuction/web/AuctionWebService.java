@@ -5,8 +5,6 @@ import webAuction.auction.domain.Category;
 import webAuction.auction.domain.Item;
 import webAuction.auction.domain.User;
 import webAuction.auction.service.auction.AuctionService;
-import webAuction.auction.service.auction.DefaultAuctionService;
-import webAuction.auction.service.seller.DefaultSellerService;
 import webAuction.auction.service.seller.SellerService;
 import webAuction.nl.fontys.util.Money;
 
@@ -16,8 +14,16 @@ import java.util.List;
 @WebService
 public class AuctionWebService {
 
-    private AuctionService auctionService = new DefaultAuctionService();
-    private SellerService sellerService = new DefaultSellerService();
+    private AuctionService auctionService;
+    private SellerService sellerService;
+
+    public AuctionWebService() {
+    }
+
+    public AuctionWebService(AuctionService auctionService, SellerService sellerService) {
+        this.auctionService = auctionService;
+        this.sellerService = sellerService;
+    }
 
     public Item getItem(Long id) {
         return auctionService.getItem(id);

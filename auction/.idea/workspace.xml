@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8434e030-4d79-4a66-b42a-ff95a3bd13b3" name="Default" comment="RegistrationClient works!">
+    <list default="true" id="8434e030-4d79-4a66-b42a-ff95a3bd13b3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AuctionClient/AuctionClient.iml" afterPath="$PROJECT_DIR$/AuctionClient/AuctionClient.iml" />
@@ -816,7 +816,7 @@
       <workItem from="1495191128758" duration="1430000" />
       <workItem from="1496145860621" duration="274000" />
       <workItem from="1496148530595" duration="2699000" />
-      <workItem from="1496151608631" duration="6268000" />
+      <workItem from="1496151608631" duration="6290000" />
     </task>
     <task id="LOCAL-00001" summary="Moved to central package">
       <created>1496148782583</created>
@@ -853,7 +853,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496152445333</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Made unittests using fake implementation of the various services">
+      <created>1496157913659</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1496157913659</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -889,7 +896,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26417000" />
+    <option name="totallyTimeSpent" value="26439000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -967,7 +974,8 @@
     <MESSAGE value="Added client" />
     <MESSAGE value="RegistrationClient works!" />
     <MESSAGE value="Tested all methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tested all methods" />
+    <MESSAGE value="Made unittests using fake implementation of the various services" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made unittests using fake implementation of the various services" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
