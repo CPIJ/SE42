@@ -1,8 +1,6 @@
 package auction.service.seller;
 
-import auction.domain.Category;
-import auction.domain.Item;
-import auction.domain.User;
+import auction.domain.*;
 import auction.repository.item.ItemRepository;
 import auction.repository.item.JPAItemRepository;
 
@@ -19,9 +17,7 @@ public class DefaultSellerService implements SellerService {
      */
     @Override
     public Item offerItem(User seller, Category cat, String description) {
-        Item item = new Item(seller, cat, description);
-        itemRepository.create(item);
-        return item;
+        return createItem(new Item(seller, cat, description));
     }
     
      /**
@@ -31,11 +27,26 @@ public class DefaultSellerService implements SellerService {
      */
     @Override
     public boolean revokeItem(Item item) {
-        if (item.getHighestBid() == null) {
+        if (item.getHighestBid().getAmount().getCents() == 0) {
             itemRepository.remove(item);
             return true;
         } else {
             return false;
         }
+    }
+
+    @Override
+    public Item offerFurniture(User seller, Category category, String description, String material) {
+        return createItem(new Furniture(seller, category, description, material));
+    }
+
+    @Override
+    public Item offerPainting(User seller, Category category, String description, String name, String painter) {
+        return createItem(new Painting(seller, category, description, name, painter));
+    }
+
+    private Item createItem(Item item) {
+        itemRepository.create(item);
+        return item;
     }
 }

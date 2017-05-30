@@ -1,6 +1,5 @@
 package auction.domain;
 
-import com.sun.istack.internal.NotNull;
 import nl.fontys.util.Money;
 
 import javax.persistence.*;
@@ -21,7 +20,7 @@ public class Item implements Comparable<Item> {
 
     private String description;
 
-    @OneToOne(targetEntity = Bid.class)
+    @OneToOne(cascade = CascadeType.PERSIST, targetEntity = Bid.class)
     @JoinColumn(nullable = false)
     private Bid highest;
 

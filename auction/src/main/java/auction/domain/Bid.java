@@ -15,10 +15,10 @@ public class Bid {
     @OneToOne(targetEntity = FontysTime.class)
     private FontysTime time;
 
-    @OneToOne(targetEntity = User.class)
+    @OneToOne(cascade = CascadeType.PERSIST, targetEntity = User.class)
     private User buyer;
 
-    @OneToOne(targetEntity = Money.class)
+    @OneToOne(cascade = CascadeType.PERSIST, targetEntity = Money.class)
     private Money amount;
 
     @OneToOne(mappedBy = "highest", targetEntity = Item.class)
@@ -34,6 +34,7 @@ public class Bid {
         this.buyer = buyer;
         this.amount = amount;
     }
+
 
     //region Getters & Setters
 
@@ -78,4 +79,5 @@ public class Bid {
     public void setItem(Item item) {
         this.item = item;
     }
+
 }

@@ -46,13 +46,6 @@ public class BidTest {
 
         Item item = sellerService.offerItem(seller, category, "test");
 
-
-
-//        Item item = new Item(user, category, "test");
-//
-//        auctionService.newBid(item, user, new Money(0, Money.EURO));
-//
-//        assertEquals(Bid.DEFAULT, item.getHighest());
+        assertSame(Bid.DEFAULT, item.getHighestBid());
     }
-
 }

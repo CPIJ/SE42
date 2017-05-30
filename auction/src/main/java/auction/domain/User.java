@@ -14,7 +14,7 @@ public class User {
     @Column(unique = true)
     private String email;
 
-    @OneToMany(cascade = CascadeType.PERSIST)
+    @OneToMany()
     private Set<Item> offeredItems;
 
     public User(String email) {

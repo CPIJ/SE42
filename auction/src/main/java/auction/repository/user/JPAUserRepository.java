@@ -50,7 +50,6 @@ public class JPAUserRepository implements UserRepository {
         try {
             return (User) query.getSingleResult();
         } catch (Exception e) {
-            System.out.println("Geen resultaten");
             return null;
         }
     }

@@ -30,7 +30,11 @@ public class JPAItemRepository implements ItemRepository {
 
     @Override
     public void edit(Item item) {
+        entityManager.getTransaction().begin();
 
+        entityManager.merge(item);
+
+        entityManager.getTransaction().commit();
     }
 
     @Override

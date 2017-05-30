@@ -14,13 +14,12 @@ import java.sql.SQLException;
 public class DatabaseCleaner {
 
     private static final Class<?>[] ENTITY_TYPES = {
-            FontysTime.class,
-            Money.class,
             Item.class,
+            Bid.class,
             User.class,
+            Money.class,
+            FontysTime.class,
             Category.class,
-            User.class,
-            Bid.class
     };
     private final EntityManager em;
 

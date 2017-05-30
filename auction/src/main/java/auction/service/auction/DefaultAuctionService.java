@@ -44,6 +44,10 @@ public class DefaultAuctionService implements AuctionService {
      */
     @Override
     public Bid newBid(Item item, User buyer, Money amount) {
-        return item.newBid(buyer, amount);
+        Bid bid = item.newBid(buyer, amount);
+
+        itemRepository.edit(item);
+
+        return bid;
     }
 }

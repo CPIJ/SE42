@@ -88,15 +88,15 @@ public class DefaultAuctionServiceTest {
         // eerste bod
         Category cat = new Category("cat9");
         Item item1 = defaultSellerService.offerItem(seller, cat, omsch);
-        Bid new1 = defaultAuctionService.newBid(item1, buyer, new Money(10, "eur"));
+        Bid new1 = defaultAuctionService.newBid(item1, buyer, new Money(10, Money.EURO));
         assertEquals(emailb, new1.getBuyer().getEmail());
 
         // lager bod
-        Bid new2 = defaultAuctionService.newBid(item1, buyer2, new Money(9, "eur"));
+        Bid new2 = defaultAuctionService.newBid(item1, buyer2, new Money(9, Money.EURO));
         assertNull(new2);
 
         // hoger bod
-        Bid new3 = defaultAuctionService.newBid(item1, buyer2, new Money(11, "eur"));
+        Bid new3 = defaultAuctionService.newBid(item1, buyer2, new Money(11, Money.EURO));
         assertEquals(emailb2, new3.getBuyer().getEmail());
     }
 }

@@ -71,7 +71,7 @@ public class DefaultSellerServiceTest {
         
             // revoke after bid has been made
         Item item2 = defaultSellerService.offerItem(seller, cat, omsch2);
-        defaultAuctionService.newBid(item2, buyer, new Money(100, "Euro"));
+        defaultAuctionService.newBid(item2, buyer, new Money(100, Money.EURO));
         boolean res2 = defaultSellerService.revokeItem(item2);
         assertFalse(res2);
         int count2 = defaultAuctionService.findItemByDescription(omsch2).size();
