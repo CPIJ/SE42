@@ -36,5 +36,6 @@
     </orderEntry>
     <orderEntry type="module" module-name="auction" scope="TEST" />
     <orderEntry type="library" name="Maven: org.eclipse.persistence:javax.persistence:2.1.0" level="project" />
+    <orderEntry type="module" module-name="RegistrationClient" scope="TEST" />
   </component>
 </module>
